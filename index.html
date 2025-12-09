@@ -5,49 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aditya Kumar Sharma</title>
   <style>
+    :root {
+      color-scheme: dark;
+    }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 0 16px;
+      padding: 0 16px 40px;
       line-height: 1.6;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
+      color: #e5e7eb;
     }
-    h1, h2 {
-      text-align: center;
+
+    h1, h2, h3 {
+      margin-top: 0;
     }
-    nav {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    nav a {
-      margin: 0 12px;
+
+    a {
+      color: #38bdf8;
       text-decoration: none;
-      font-weight: 600;
     }
-    nav a:hover {
+
+    a:hover {
       text-decoration: underline;
     }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-      margin-top: 20px;
+
+    nav {
+      text-align: center;
+      margin: 24px 0 24px;
     }
+
+    nav a {
+      margin: 0 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .card {
+      background-color: rgba(15, 23, 42, 0.9);
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 20px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #38bdf8;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      background-color: #020617;
+    }
+
+    .header-text h1 {
+      font-size: 2rem;
+    }
+
+    .header-text p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
+
     ul {
       padding-left: 20px;
     }
+
     .pub-item {
       margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(55, 65, 81, 0.6);
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pub-item em {
+      color: #e5e7eb;
+    }
+
+    .section-title {
+      border-bottom: 1px solid #374151;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .header {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+      }
+
+      .header-text h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Aditya Kumar Sharma</h1>
-  <p style="text-align:center;">
-    Postdoctoral Researcher, GRAVITY - Física Gravitacional: Teoria i Observació<br />
-    Institut d'Aplicacions Computacionals de Codi Comunitari (IAC3), Universitat de les Illes Balears<br />
-    Member, LIGO–Virgo–KAGRA Scientific Collaboration
-  </p>
+  <!-- Header with profile picture -->
+  <section class="card">
+    <div class="header">
+      <!-- Replace "profile.jpg" with your actual image filename or URL -->
+      <img src="profile.jpg" alt="Profile picture of Aditya Kumar Sharma" class="profile-pic" />
+      <div class="header-text">
+        <h1>Aditya Kumar Sharma</h1>
+        <p>
+          Postdoctoral Researcher, GRAVITY – Física Gravitacional: Teoria i Observació<br />
+          Institut d'Aplicacions Computacionals de Codi Comunitari (IAC3), Universitat de les Illes Balears
+        </p>
+        <p>Member, LIGO–Virgo–KAGRA Scientific Collaboration</p>
+        <p>
+          ORCID:
+          <a href="https://orcid.org/0000-0003-0067-346X" target="_blank" rel="noopener">
+            0000-0003-0067-346X
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <nav>
     <a href="#about">About</a>
@@ -58,12 +150,12 @@
 
   <!-- About Section -->
   <section id="about" class="card">
-    <h2>About</h2>
+    <h2 class="section-title">About</h2>
     <p>
-      I am a postdoctoral researcher at GRAVITY - Física Gravitacional: Teoria i Observació,
+      I am a postdoctoral researcher at GRAVITY – Física Gravitacional: Teoria i Observació,
       working within the Institut d'Aplicacions Computacionals de Codi Comunitari (IAC3)
       at the Universitat de les Illes Balears. I am also a member of the
-      LIGO-Virgo-KAGRA Scientific Collaboration.
+      LIGO–Virgo–KAGRA Scientific Collaboration.
     </p>
 
     <h3>Education</h3>
@@ -73,17 +165,17 @@
       <li><strong>Ph.D.</strong> — Tata Institute of Fundamental Research</li>
     </ul>
 
-    <p><strong>Doctoral Advisor:</strong> Prof. Parameswaran Ajith</p>
-
     <p>
-      <strong>ORCID:</strong>
-      <a href="https://orcid.org/0000-0003-0067-346X" target="_blank">0000-0003-0067-346X</a>
+      <strong>Doctoral Advisor:</strong>
+      <a href="https://home.icts.res.in/~ajith/Home.html" target="_blank" rel="noopener">
+        Prof. Parameswaran Ajith
+      </a>
     </p>
   </section>
 
   <!-- Research Interests -->
   <section id="interests" class="card">
-    <h2>Research Interests</h2>
+    <h2 class="section-title">Research Interests</h2>
     <ul>
       <li>Gravitational waves</li>
       <li>General relativity and related theories</li>
@@ -97,40 +189,61 @@
 
   <!-- Publications -->
   <section id="publications" class="card">
-    <h2>Selected Publications</h2>
+    <h2 class="section-title">Selected Publications</h2>
 
     <div class="pub-item">
-      <strong>1) Samson H. W. Leong; Justin Janquart; Aditya Kumar Sharma; Paul Martens; Parameswaran Ajith; Otto A. Hannuksela. (2025 August 13)</strong><br/>
+      <strong>
+        1) Samson H. W. Leong; Justin Janquart; Aditya Kumar Sharma; Paul Martens;
+        Parameswaran Ajith; Otto A. Hannuksela. (2025 August 13)
+      </strong><br/>
       Constraining Binary Mergers in Active Galactic Nuclei Disks Using the Nonobservation of Lensed Gravitational Waves.<br/>
       <em>The Astrophysical Journal Letters</em>, Volume 979, Number 2, L27.<br/>
-      <a href="https://doi.org/10.3847/2041-8213/ad9ead" target="_blank">https://doi.org/10.3847/2041-8213/ad9ead</a>
+      <a href="https://doi.org/10.3847/2041-8213/ad9ead" target="_blank" rel="noopener">
+        https://doi.org/10.3847/2041-8213/ad9ead
+      </a>
     </div>
 
     <div class="pub-item">
-      <strong>2) Gopalkrishna Prabhu; Aditya Kumar Sharma; R. Prasad; Shasvath J. Kapadia. (2024 August 13)</strong><br/>
+      <strong>
+        2) Gopalkrishna Prabhu; Aditya Kumar Sharma; R. Prasad; Shasvath J. Kapadia. (2024 August 13)
+      </strong><br/>
       Constraining the Abundance of Spinning Deformed Galactic Compact Objects with Continuous Gravitational Waves.<br/>
       <em>The Astrophysical Journal</em>, Volume 971, Number 2, 135.<br/>
-      <a href="https://doi.org/10.3847/1538-4357/ad583f" target="_blank">https://doi.org/10.3847/1538-4357/ad583f</a>
+      <a href="https://doi.org/10.3847/1538-4357/ad583f" target="_blank" rel="noopener">
+        https://doi.org/10.3847/1538-4357/ad583f
+      </a>
     </div>
 
     <div class="pub-item">
-      <strong>3) Soummyadip Basak; Aditya Kumar Sharma; Shasvath J. Kapadia; Parameswaran Ajith. (2023 January 11)</strong><br/>
+      <strong>
+        3) Soummyadip Basak; Aditya Kumar Sharma; Shasvath J. Kapadia; Parameswaran Ajith. (2023 January 11)
+      </strong><br/>
       Prospects for the Observation of Continuous Gravitational Waves from Spinning Neutron Stars Lensed by the Galactic Supermassive Black Hole.<br/>
       <em>The Astrophysical Journal Letters</em>, Volume 942, Number 2, L31.<br/>
-      <a href="https://doi.org/10.3847/2041-8213/acab50" target="_blank">https://doi.org/10.3847/2041-8213/acab50</a>
+      <a href="https://doi.org/10.3847/2041-8213/acab50" target="_blank" rel="noopener">
+        https://doi.org/10.3847/2041-8213/acab50
+      </a>
     </div>
 
     <p>
       Full publication list:  
-      <a href="https://orcid.org/0000-0003-0067-346X" target="_blank">ORCID Profile</a>
+      <a href="https://orcid.org/0000-0003-0067-346X" target="_blank" rel="noopener">
+        ORCID Profile
+      </a>
     </p>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>Email: aditya[dot]sharma[at]uib[dot]es</p>
-  </section>
+<!-- Contact -->
+<section id="contact" class="card">
+  <h2 class="section-title">Contact</h2>
+  <p><strong>Email:</strong> aditya[dot]sharma[at]uib[dot]es</p>
+  <p><strong>Phone:</strong> +34 971 17 3327</p>
+  <p><strong>Office:</strong> 112, Room 101</p>
+  <p><strong>Institute:</strong> IAC3, UIB</p>
+  <p><strong>Address:</strong><br>
+     ParcBit, 07121 Palma, Illes Balears, España
+  </p>
+</section>
 
 </body>
 </html>
